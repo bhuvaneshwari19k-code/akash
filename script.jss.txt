@@ -1,0 +1,14 @@
+// Contact form submission
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let message = document.getElementById("message").value;
+
+  document.getElementById("response").innerText = 
+    `Thank you, ${name}! I have received your message.`;
+    
+  // Clear form
+  this.reset();
+});
